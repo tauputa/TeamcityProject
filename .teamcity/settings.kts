@@ -17,7 +17,7 @@ project {
  //   bts.Last().triggers{
 //      vcs {
  //       }
-    }
+//    }
 }
 
 class Maven(name:String,goals:String,runnerArgs:String?=null): BuildType({
