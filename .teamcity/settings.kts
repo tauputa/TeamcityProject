@@ -14,10 +14,12 @@ project {
         buildType(Maven("Package","clean package","-Dmaven.test.failure.ignore=true -DskipTests"))
     }.buildTypes()
     bts.forEach{buildType(it)}
- //   bts.Last().triggers{
-//      vcs {
- //       }
-//    }
+
+    bts.Last().triggers{
+      vcs {
+        }
+    }
+
 }
 
 class Maven(name:String,goals:String,runnerArgs:String?=null): BuildType({
