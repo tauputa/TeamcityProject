@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Annotation profile for HelloWorld Config DSL Script" enabled="true">
+        <sourceOutputDir name="../../../../../wsl$/Ubuntu/home/ayoung/Kotlin/TeamcityProject/.teamcity/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../../../../wsl$/Ubuntu/home/ayoung/Kotlin/TeamcityProject/.teamcity/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name=".teamcity" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name=".teamcity" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
