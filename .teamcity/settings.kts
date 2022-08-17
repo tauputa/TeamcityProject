@@ -24,7 +24,7 @@ project {
 
 class Maven(name:String,goals:String,runnerArgs:String?=null): BuildType({
     //id(name)            // use the name as the unique build id
-    id(name.toExtID())
+    id(name.toExtId())
     this.name = name
     vcs {
         root(DslContext.settingsRoot)
