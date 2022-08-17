@@ -7,5 +7,6 @@ project {
     params {
         param("teamcity.ui.settings.readOnly", "true")  // disable changing project via UI
     }
-//    subProject(MainProject())
+    subProject(MainProject())
 }
+
