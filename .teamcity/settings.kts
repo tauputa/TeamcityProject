@@ -6,24 +6,23 @@ version = "2021.1"
 project {
 
     val bts = sequential {
-        buildType(Maven("Build","clean compile","-Dmaven.test.failure.ignore=true","Build"))
+        buildType(Maven("Build","clean compile","-Dmaven.test.failure.ignore=true"))
 	parallel{
-        buildType(Maven("Unit","clean test","-Dmaven.test.failure.ignore=true -Dtest=*.unit.*Test","Unit"))
-        buildType(Maven("Integration","clean test","-Dmaven.test.failure.ignore=true -Dtest=*.integration.*Test","Integration"))
+        buildType(Maven("Unit","clean test","-Dmaven.test.failure.ignore=true -Dtest=*.unit.*Test"))
+        buildType(Maven("Integration","clean test","-Dmaven.test.failure.ignore=true -Dtest=*.integration.*Test"))
 	}
-        buildType(Maven("Package","clean package","-Dmaven.test.failure.ignore=true -DskipTests","Package"))
+        buildType(Maven("Package","clean package","-Dmaven.test.failure.ignore=true -DskipTests"))
     }.buildTypes()
     bts.forEach{buildType(it)}
-    bts.Last().triggers{
-        vcs {
-            
-        }
+ //   bts.Last().triggers{
+//      vcs {
+ //       }
     }
 }
 
-class Maven(name:String,goals:String,runnerArgs:String?=null,ID: String): BuildType({
+class Maven(name:String,goals:String,runnerArgs:String?=null): BuildType({
     //id("UnitTest")
-    id(this.ID)
+    //id(this.ID)
     this.name = name
     vcs {
         root(DslContext.settingsRoot)
