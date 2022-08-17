@@ -15,7 +15,7 @@ project {
     }.buildTypes()
     bts.forEach{buildType(it)}
 
-    bts.last().triggers{
+    bts.last().triggers{  // add vcs trigger for last element in list - ie package
       vcs {
         }
     }
@@ -23,9 +23,8 @@ project {
 }
 
 class Maven(name:String,goals:String,runnerArgs:String?=null): BuildType({
-    //id("UnitTest")
-    id(name)
-    //id = this.name
+    //id(name)            // use the name as the unique build id
+    id(name.toExtID())
     this.name = name
     vcs {
         root(DslContext.settingsRoot)
