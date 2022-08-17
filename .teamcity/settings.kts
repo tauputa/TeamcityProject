@@ -3,10 +3,10 @@ version = "2021.1"
 version = "2021.1"
 
 project {
-    subProject(MainProject())
+    subProject(MainProject)
 }
 
-object MainProject() : Project({    
+object MainProject : Project({    
     name = "Main"
     id(name.toId())
 })
