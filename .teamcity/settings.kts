@@ -13,7 +13,7 @@ project {
 	}
         buildType(Maven("Package","clean package","-Dmaven.test.failure.ignore=true -DskipTests"))
     }.buildTypes()
-    bts.forEach{buildType(i)}
+    bts.forEach{buildType(it)}
  //   bts.Last().triggers{
 //      vcs {
  //       }
