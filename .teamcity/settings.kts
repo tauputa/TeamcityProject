@@ -15,7 +15,7 @@ project {
     }.buildTypes()
     bts.forEach{buildType(it)}
 
-    bts.Last().triggers{
+    bts.last().triggers{
       vcs {
         }
     }
