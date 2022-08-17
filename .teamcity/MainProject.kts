@@ -4,5 +4,11 @@ class MainProject() : Project() {
     init {
         name = "Main"
         id(name.toId())
+
+        buildType(PackerBuild{
+            name = "teamcity-base"
+            id("Main $name".toId())
+        })
+
     }
 }
