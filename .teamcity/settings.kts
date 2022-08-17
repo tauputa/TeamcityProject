@@ -10,10 +10,10 @@ project {
     description = "Maven 3.6 java project forked from anewtodolist"
     buildType(Clean)  
     buildType(Package)  
-//    sequential {
-//        buildType(Clean)
-//        buildType(Package)
-//    }
+    sequential {
+        buildType(Clean)
+        buildType(Package)
+    }
 }
 
 object Clean : BuildType({ 
