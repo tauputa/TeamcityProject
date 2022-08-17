@@ -23,7 +23,7 @@ project {
 class Maven(name:String,goals:String,runnerArgs:String?=null): BuildType({
     //id("UnitTest")
     //id(this.ID)
-    this.id = name
+    this.id = name.toString()
     this.name = name
     vcs {
         root(DslContext.settingsRoot)
