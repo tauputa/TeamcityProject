@@ -14,8 +14,12 @@ project {
         buildType(Maven("Package","clean package","-Dmaven.test.failure.ignore=true -DskipTests"))
     }.buildTypes()
 
-    bts.forEach{
-        buildType(it)
+//    bts.forEach{
+//        buildType(it)
+//    }
+
+    for (i in bts) {
+        buildType(i)
     }
 
     bts.last().triggers{  // add vcs trigger for last element in list - ie package
